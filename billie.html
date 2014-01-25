@@ -226,7 +226,9 @@
         $("body").addClass("site-nav-transition site-nav-drawer-open");
       });
       $(".site-nav-overlay").click(function(){
-        $("body").removeClass("site-nav-transition site-nav-drawer-open");
+        body = $("body");
+        body.removeClass("site-nav-drawer-open");
+        setTimeout(function(){body.removeClass("site-nav-transition");}, 300);
       });
     </script>
   </body>
